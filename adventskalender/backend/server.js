@@ -26,11 +26,13 @@ bookings[day] = name;
 
 try {
 const transporter = nodemailer.createTransport({
-service: "gmail",
-auth: {
-user: process.env.MAIL_USER,
-pass: process.env.MAIL_PASS,
-},
+  host: process.env.MAIL_HOST,
+  port: process.env.MAIL_PORT,
+  secure: false, // true für Port 465, false für 587
+  auth: {
+    user: process.env.MAIL_USER,
+    pass: process.env.MAIL_PASS,
+  },
 });
 
 await transporter.sendMail({
