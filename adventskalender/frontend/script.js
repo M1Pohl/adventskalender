@@ -1,4 +1,4 @@
-const API_URL = "https://dein-backend.onrender.com";
+const API_URL = "https://adventskalender-yc7k.onrender.com";
 
 const calendar = document.getElementById('calendar');
 const registrationForm = document.getElementById('registrationForm');
